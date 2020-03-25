@@ -15,7 +15,8 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase:
+      "https://uxdesignerlin.github.io/react-created-with-webpack/dist",
     historyApiFallback: true
     // publicPath: "/react-created-with-webpack/dist/"
   },
