@@ -5,7 +5,8 @@ module.exports = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index_bundle.js"
+    publicPath: "/"
+    //filename: "index_bundle.js"
   },
   module: {
     rules: [
@@ -14,12 +15,13 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true,
-    publicPath: "/react-created-with-webpack/dist/"
+    contentBase: "./dist",
+    historyApiFallback: true
+    // publicPath: "/react-created-with-webpack/dist/"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "app/index.html"
+      //template: "app/index.html"
     })
   ]
 };
