@@ -4,8 +4,8 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./app/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/"
+    //path: path.resolve(__dirname, "build"),
+    //publicPath: "/",
     //filename: "index_bundle.js"
   },
   module: {
@@ -15,14 +15,14 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase:
-      "https://uxdesignerlin.github.io/react-created-with-webpack/dist",
-    historyApiFallback: true
-    // publicPath: "/react-created-with-webpack/dist/"
+    historyApiFallback: true,
+    contentBase: "./build"
+    //publicPath: "http://localhost:8081/react-created-with-webpack/dist/"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      //template: "app/index.html"
+      // template: "app/index.html"
+      template: path.resolve("app/index.html")
     })
   ]
 };
