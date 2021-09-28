@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-   name: Lint & Test
+    Lint & Test:
     steps:
       - uses: actions/checkout@master
 
