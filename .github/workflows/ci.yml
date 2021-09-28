@@ -7,21 +7,10 @@ on:
   pull_request:
 
 jobs:
-    Lint & Test:
+    build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Lint
-        run: |-
-          yarn format:check;
-          yarn lint;
 
-      - name: Test
-        run: |-
-          yarn test:unit;
-          yarn test:types;
-
-      - name: Build # Tests to see if a build can succeed
-        run: yarn build
+   
