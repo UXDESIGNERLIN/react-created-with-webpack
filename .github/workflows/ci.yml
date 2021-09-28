@@ -8,10 +8,9 @@ on:
 
 jobs:
    name: Lint & Test
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      
+
       - name: Lint
         run: |-
           yarn format:check;
